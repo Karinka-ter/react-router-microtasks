@@ -1,0 +1,25 @@
+.wrapperBox{
+    display: flex;
+    gap: 15px;
+   justify-content: center;
+}
+
+.wrapperCard{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    gap: 20px;
+    padding: 3px;
+}
+
+.wrapperCard:hover {
+    transform: scale(1.05); /* Увеличение всей карточки на 5% */
+}
+
+.picture{
+    height: 300px;
+    width: 300px;
+    object-fit: cover
+}
