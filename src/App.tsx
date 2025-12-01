@@ -36,11 +36,12 @@ export const App = () => {
                 </div>
                 <div className={styles.content}>
                     <Routes>
-                        <Route path={'/'} element={<Navigate to='page1'/>}/>
+                        <Route path={'/'} element={<Navigate to={PATH.PAGE1}/>}/>
                         <Route path={PATH.PAGE1} element={<Adidas/>}/>
                         <Route path={PATH.PAGE2} element={<Puma/>}/>
                         <Route path={PATH.PAGE3} element={<Abibas/>}/>
-                        <Route path='/adidas/:id' element={<Modal/>}/>
+                        <Route path='/:modal/:id' element={<Modal/>}/>
+
 
                         <Route path={'*'} element={<Error404/>}/>
                     </Routes>

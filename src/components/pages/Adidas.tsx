@@ -1,19 +1,13 @@
-import adidasImage1 from './../../assets/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp';
-import adidasImage2 from './../../assets/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp';
+import adidasImage1 from '../../assets/adidas/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp';
+import adidasImage2 from '../../assets/adidas/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp';
 import adidasImage3
-    from './../../assets/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp';
+    from '../../assets/adidas/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp';
 import s from './styleAdidas.module.css'
 import {Link} from "react-router-dom";
+import {TypeItem} from "./Puma.tsx";
 
 
-export type AdidasItem= {
-    id:number;
-    name: string;
-    collection: string;
-    price: string;
-    picture: string;
-}
-export const adidasArr:AdidasItem[] = [
+export const adidasArr:TypeItem[] = [
     {
         id:1,
         name: 'ADIDAS ADIFOM TRXN',
