@@ -5,11 +5,13 @@ import {Abibas} from "./components/pages/Abibas.tsx";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {Error404} from "./components/pages/Error404.tsx";
 import {Modal} from "./components/Modal/Modal.tsx";
+import {Prices} from "./components/Prices/Prices.tsx";
 
 const PATH ={
     PAGE1: 'adidas',
     PAGE2: 'puma',
     PAGE3: 'abibas',
+    PRICES: 'prices',
     ERROR: 'error404'
 } as const
 
@@ -33,6 +35,9 @@ export const App = () => {
                     <div><NavLink
                         className={navLinkStyles}
                         to={PATH.PAGE3}>Abibas</NavLink></div>
+                    <div><NavLink
+                        className={navLinkStyles}
+                        to={PATH.PRICES}>Цены для оптовиков</NavLink></div>
                 </div>
                 <div className={styles.content}>
                     <Routes>
@@ -41,6 +46,7 @@ export const App = () => {
                         <Route path={PATH.PAGE2} element={<Puma/>}/>
                         <Route path={PATH.PAGE3} element={<Abibas/>}/>
                         <Route path='/:modal/:id' element={<Modal/>}/>
+                        <Route path={PATH.PRICES} element={<Prices/>}/>
 
 
                         <Route path={'*'} element={<Error404/>}/>
